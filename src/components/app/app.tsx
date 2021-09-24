@@ -1,9 +1,9 @@
 import logo from '../../media/logo.svg';
-import './app.css';
+import styles from './app.module.css';
 
 export const App = () => (
-  <div className="app">
-    <img src={logo} className="app-logo" alt="logo" />
+  <div className={styles.App}>
+    <img src={logo} className={styles.AppLogo} alt="logo" />
     <p>Hello</p>
   </div>
 );
