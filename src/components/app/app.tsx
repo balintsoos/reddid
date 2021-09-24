@@ -1,9 +1,9 @@
-import logo from '../../media/logo.svg';
+import { ReactComponent as Logo } from '../../media/logo.svg';
 import styles from './app.module.css';
 
 export const App = () => (
   <div className={styles.App}>
-    <img src={logo} className={styles.AppLogo} alt="logo" />
-    <p>Hello</p>
+    <Logo className={styles.AppLogo} />
+    <p>Coming soon</p>
   </div>
 );
