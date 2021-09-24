@@ -48,7 +48,7 @@ jobs:
       -
         name: Install dependencies
         if: steps.cache-build.outputs.cache-hit != 'true'
-        run: npm ci --no-audit
+        run: npm ci --prefer-offline --no-audit
       -
         name: Build
         if: steps.cache-build.outputs.cache-hit != 'true'
@@ -79,7 +79,7 @@ jobs:
           key: node-${{ steps.nvm.outputs.NVMRC }}-npm-${{ hashFiles('**/package-lock.json') }}
       -
         name: Install dependencies
-        run: npm ci --no-audit
+        run: npm ci --prefer-offline --no-audit
       -
         name: Run test
         run: npm run test
