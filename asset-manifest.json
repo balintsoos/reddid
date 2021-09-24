@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/reddid/static/css/main.a86f41fc.chunk.css",
-    "main.js": "/reddid/static/js/main.8b85235c.chunk.js",
-    "main.js.map": "/reddid/static/js/main.8b85235c.chunk.js.map",
+    "main.js": "/reddid/static/js/main.450dba3c.chunk.js",
+    "main.js.map": "/reddid/static/js/main.450dba3c.chunk.js.map",
     "runtime-main.js": "/reddid/static/js/runtime-main.cb36f7dc.js",
     "runtime-main.js.map": "/reddid/static/js/runtime-main.cb36f7dc.js.map",
     "static/js/2.4adb46d0.chunk.js": "/reddid/static/js/2.4adb46d0.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.cb36f7dc.js",
     "static/js/2.4adb46d0.chunk.js",
     "static/css/main.a86f41fc.chunk.css",
-    "static/js/main.8b85235c.chunk.js"
+    "static/js/main.450dba3c.chunk.js"
   ]
 }
