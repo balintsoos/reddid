@@ -51,3 +51,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 The media icons were generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
 
 Check your favicon with the [favicon checker](https://realfavicongenerator.net/favicon_checker)
+
+## Useful links
+
+- [Reddit > Preferencies > Apps](https://www.reddit.com/prefs/apps)
+- [Reddit API Docs](https://www.reddit.com/dev/api)
+- [Generate Reddit OAuth Tokens](https://not-an-aardvark.github.io/reddit-oauth-helper/)
