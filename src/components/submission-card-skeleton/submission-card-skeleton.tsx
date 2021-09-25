@@ -6,10 +6,10 @@ export const SubmissionCardSkeleton = () => {
   return (
     <Card sx={{ margin: '20px', width: '800px' }}>
       <CardHeader
-        title={<Skeleton animation="pulse" height={32} width="85%" />}
-        subheader={<Skeleton animation="pulse" height={24} width="30%" />}
+        title={<Skeleton animation="wave" height={32} width="85%" />}
+        subheader={<Skeleton animation="wave" height={24} width="30%" />}
       />
-      <Skeleton sx={{ height: 450 }} animation="pulse" variant="rectangular" />
+      <Skeleton sx={{ height: 450 }} animation="wave" variant="rectangular" />
     </Card>
   );
 };
