@@ -57,3 +57,4 @@ Check your favicon with the [favicon checker](https://realfavicongenerator.net/f
 - [Reddit > Preferencies > Apps](https://www.reddit.com/prefs/apps)
 - [Reddit API Docs](https://www.reddit.com/dev/api)
 - [Generate Reddit OAuth Tokens](https://not-an-aardvark.github.io/reddit-oauth-helper/)
+- [Reddit API wrapper: snoowrap](https://github.com/not-an-aardvark/snoowrap)
