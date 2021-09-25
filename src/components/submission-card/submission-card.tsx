@@ -11,7 +11,6 @@ export const SubmissionCard = (props: { submission: Submission }) => {
   console.log(submission);
   const hasImages = submission.preview?.images?.length > 0;
   const firstImage = submission.preview?.images[0];
-  const lastResolution = firstImage?.resolutions[firstImage.resolutions.length - 1];
   return (
     <Card sx={{ margin: '20px', width: '60vw' }}>
       <CardActionArea>
@@ -22,7 +21,7 @@ export const SubmissionCard = (props: { submission: Submission }) => {
         {hasImages ? (
           <CardMedia
             component="img"
-            image={lastResolution.url}
+            image={firstImage.source.url}
             alt="Paella dish"
           />
         ) : (
