@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { App } from './app';
 
-test('renders hello', () => {
+test('renders Reddid', () => {
   render(<App />);
-  const helloElement = screen.getByText(/Coming soon/i);
-  expect(helloElement).toBeInTheDocument();
+  const element = screen.getByText(/Reddid/i);
+  expect(element).toBeInTheDocument();
 });
