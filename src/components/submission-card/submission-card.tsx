@@ -22,7 +22,6 @@ export const SubmissionCard = (props: { submission: Submission }) => {
           <CardMedia
             component="img"
             image={firstImage.source.url}
-            alt="Paella dish"
           />
         ) : (
           <CardContent>
