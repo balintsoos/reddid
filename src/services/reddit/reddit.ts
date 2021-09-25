@@ -4,11 +4,12 @@ export class RedditService {
   private _r: Snoowrap;
 
   constructor() {
+    const storage = window.localStorage;
     this._r = new Snoowrap({
-      userAgent: 'web:reddid:v0.0.1 (by /u/_reddid)',
-      clientId: 'clientId',
-      clientSecret: 'clientSecret',
-      refreshToken: 'refreshToken',
+      userAgent: storage.getItem('userAgent') ?? '',
+      clientId: storage.getItem('clientId') ?? '',
+      clientSecret: storage.getItem('clientSecret') ?? '',
+      refreshToken: storage.getItem('refreshToken') ?? '',
     });
   }
 
