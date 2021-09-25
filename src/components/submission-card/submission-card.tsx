@@ -12,7 +12,7 @@ export const SubmissionCard = (props: { submission: Submission }) => {
   const hasImages = submission.preview?.images?.length > 0;
   const firstImage = submission.preview?.images[0];
   return (
-    <Card sx={{ margin: '20px', width: '60vw' }}>
+    <Card sx={{ margin: '20px', width: '800px' }}>
       <CardActionArea>
         <CardHeader
           title={submission.title}
