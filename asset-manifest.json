@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/reddid/static/js/main.d9b4865c.chunk.js",
-    "main.js.map": "/reddid/static/js/main.d9b4865c.chunk.js.map",
+    "main.js": "/reddid/static/js/main.663c6f77.chunk.js",
+    "main.js.map": "/reddid/static/js/main.663c6f77.chunk.js.map",
     "runtime-main.js": "/reddid/static/js/runtime-main.86e514e4.js",
     "runtime-main.js.map": "/reddid/static/js/runtime-main.86e514e4.js.map",
-    "static/js/2.cc0da1a6.chunk.js": "/reddid/static/js/2.cc0da1a6.chunk.js",
-    "static/js/2.cc0da1a6.chunk.js.map": "/reddid/static/js/2.cc0da1a6.chunk.js.map",
+    "static/js/2.c1c6a708.chunk.js": "/reddid/static/js/2.c1c6a708.chunk.js",
+    "static/js/2.c1c6a708.chunk.js.map": "/reddid/static/js/2.c1c6a708.chunk.js.map",
     "static/js/3.4ec4961f.chunk.js": "/reddid/static/js/3.4ec4961f.chunk.js",
     "static/js/3.4ec4961f.chunk.js.map": "/reddid/static/js/3.4ec4961f.chunk.js.map",
     "index.html": "/reddid/index.html",
-    "static/js/2.cc0da1a6.chunk.js.LICENSE.txt": "/reddid/static/js/2.cc0da1a6.chunk.js.LICENSE.txt",
+    "static/js/2.c1c6a708.chunk.js.LICENSE.txt": "/reddid/static/js/2.c1c6a708.chunk.js.LICENSE.txt",
     "static/media/logo.3f2ef86c.svg": "/reddid/static/media/logo.3f2ef86c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.86e514e4.js",
-    "static/js/2.cc0da1a6.chunk.js",
-    "static/js/main.d9b4865c.chunk.js"
+    "static/js/2.c1c6a708.chunk.js",
+    "static/js/main.663c6f77.chunk.js"
   ]
 }
