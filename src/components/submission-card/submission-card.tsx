@@ -8,7 +8,6 @@ import { Submission } from 'snoowrap';
 
 export const SubmissionCard = (props: { submission: Submission }) => {
   const { submission } = props;
-  console.log(submission);
   const hasImages = submission.preview?.images?.length > 0;
   const firstImage = submission.preview?.images[0];
   return (
