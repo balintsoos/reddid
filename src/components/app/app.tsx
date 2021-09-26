@@ -1,12 +1,14 @@
-import Box from '@mui/material/Box';
+import { useReducer } from 'react';
 import Header from 'components/header';
 import SubmissionList from 'components/submission-list';
+import { ApiContext, apiReducer, getApiDefaultValue } from 'api';
 
 export const App = () => {
+  const [api, setApiOptions] = useReducer(apiReducer, getApiDefaultValue());
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <ApiContext.Provider value={{ api, setApiOptions }}>
       <Header />
       <SubmissionList />
-    </Box>
+    </ApiContext.Provider>
   );
 };
