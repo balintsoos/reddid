@@ -26,7 +26,14 @@ export const SubmissionList = () => {
   const [isLoading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const r = new RedditService();
+    const storage = window.localStorage;
+    const options = {
+      userAgent: storage.getItem('userAgent') ?? '',
+      clientId: storage.getItem('clientId') ?? '',
+      clientSecret: storage.getItem('clientSecret') ?? '',
+      refreshToken: storage.getItem('refreshToken') ?? '',
+    }
+    const r = new RedditService(options);
     r.getHot().then((submissions) => {
       setSubmissions(submissions);
       setLoading(false);
