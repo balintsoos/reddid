@@ -34,7 +34,7 @@ export const SubmissionList = () => {
   }, []);
 
   return (
-    <Stack direction="column" justifyContent="flex-start" alignItems="center">
+    <Stack spacing={3} sx={{ marginY: '20px' }} direction="column" justifyContent="flex-start" alignItems="center">
       {isLoading ? <Loading /> : <Loaded submissions={submissions} />}
     </Stack>
   );

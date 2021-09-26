@@ -4,12 +4,12 @@ import Skeleton from '@mui/material/Skeleton';
 
 export const SubmissionCardSkeleton = () => {
   return (
-    <Card sx={{ margin: '20px', width: '800px' }}>
+    <Card sx={{ width: { xs: '100%', md: '800px' } }}>
       <CardHeader
         title={<Skeleton animation="wave" height={32} width="85%" />}
         subheader={<Skeleton animation="wave" height={24} width="30%" />}
       />
-      <Skeleton sx={{ height: 450 }} animation="wave" variant="rectangular" />
+      <Skeleton sx={{ height: { xs: 220, md: 450 } }} animation="wave" variant="rectangular" />
     </Card>
   );
 };

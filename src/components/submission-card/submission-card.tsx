@@ -12,17 +12,14 @@ export const SubmissionCard = (props: { submission: Submission }) => {
   const hasImages = submission.preview?.images?.length > 0;
   const firstImage = submission.preview?.images[0];
   return (
-    <Card sx={{ margin: '20px', width: '800px' }}>
+    <Card sx={{ width: { xs: '100%', md: '800px' } }}>
       <CardActionArea>
         <CardHeader
           title={submission.title}
           subheader={`${submission.subreddit_name_prefixed} - ${submission.ups} ups ${submission.downs} downs`}
         />
         {hasImages ? (
-          <CardMedia
-            component="img"
-            image={firstImage.source.url}
-          />
+          <CardMedia component="img" image={firstImage.source.url} />
         ) : (
           <CardContent>
             <Typography>{submission.selftext}</Typography>
