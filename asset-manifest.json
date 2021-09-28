@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/reddid/static/js/main.cc91180e.chunk.js",
-    "main.js.map": "/reddid/static/js/main.cc91180e.chunk.js.map",
-    "runtime-main.js": "/reddid/static/js/runtime-main.4c9a6d0a.js",
-    "runtime-main.js.map": "/reddid/static/js/runtime-main.4c9a6d0a.js.map",
-    "static/js/2.f9cbba26.chunk.js": "/reddid/static/js/2.f9cbba26.chunk.js",
-    "static/js/2.f9cbba26.chunk.js.map": "/reddid/static/js/2.f9cbba26.chunk.js.map",
-    "static/js/3.28ee7dbf.chunk.js": "/reddid/static/js/3.28ee7dbf.chunk.js",
-    "static/js/3.28ee7dbf.chunk.js.map": "/reddid/static/js/3.28ee7dbf.chunk.js.map",
+    "main.js": "/reddid/static/js/main.f7b0bd97.chunk.js",
+    "main.js.map": "/reddid/static/js/main.f7b0bd97.chunk.js.map",
+    "runtime-main.js": "/reddid/static/js/runtime-main.9df4b7d0.js",
+    "runtime-main.js.map": "/reddid/static/js/runtime-main.9df4b7d0.js.map",
+    "static/js/2.e74af1f2.chunk.js": "/reddid/static/js/2.e74af1f2.chunk.js",
+    "static/js/2.e74af1f2.chunk.js.map": "/reddid/static/js/2.e74af1f2.chunk.js.map",
+    "static/js/3.07d0dacf.chunk.js": "/reddid/static/js/3.07d0dacf.chunk.js",
+    "static/js/3.07d0dacf.chunk.js.map": "/reddid/static/js/3.07d0dacf.chunk.js.map",
     "index.html": "/reddid/index.html",
-    "static/js/2.f9cbba26.chunk.js.LICENSE.txt": "/reddid/static/js/2.f9cbba26.chunk.js.LICENSE.txt",
+    "static/js/2.e74af1f2.chunk.js.LICENSE.txt": "/reddid/static/js/2.e74af1f2.chunk.js.LICENSE.txt",
     "static/media/logo.3f2ef86c.svg": "/reddid/static/media/logo.3f2ef86c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4c9a6d0a.js",
-    "static/js/2.f9cbba26.chunk.js",
-    "static/js/main.cc91180e.chunk.js"
+    "static/js/runtime-main.9df4b7d0.js",
+    "static/js/2.e74af1f2.chunk.js",
+    "static/js/main.f7b0bd97.chunk.js"
   ]
 }
