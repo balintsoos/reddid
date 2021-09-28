@@ -52,7 +52,7 @@ export const SubmissionList = () => {
       .catch(() => {
         setState(State.Failed);
       });
-  }, [apiContext]);
+  }, [apiContext?.api]);
 
   return (
     <Stack spacing={3} sx={{ marginY: '20px' }} direction="column" justifyContent="flex-start" alignItems="center">

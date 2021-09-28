@@ -1,4 +1,10 @@
 import { createContext, Dispatch } from 'react';
 import { Api, ApiOptions } from 'api';
 
-export const ApiContext = createContext<undefined | { api: Api; setApiOptions: Dispatch<ApiOptions> }>(undefined);
+export type ApiContextPayload = {
+  api: Api;
+  apiOptions: ApiOptions;
+  setApiOptions: Dispatch<ApiOptions>
+}
+
+export const ApiContext = createContext<ApiContextPayload | undefined>(undefined);

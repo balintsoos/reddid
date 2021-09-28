@@ -22,8 +22,8 @@ export const App = () => {
   }, [apiOptions])
 
   return (
-    <ApiContext.Provider value={{ api, setApiOptions }}>
-      <SettingsContainer apiOptions={apiOptions} setApiOptions={setApiOptions}>
+    <ApiContext.Provider value={{ api, apiOptions, setApiOptions }}>
+      <SettingsContainer>
         {(open: () => void) => (
           <Header open={open} />
         )}
