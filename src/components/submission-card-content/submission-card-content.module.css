@@ -5,7 +5,8 @@
   height: 0;
 }
 
-.submission-card-video-content iframe {
+.submission-card-video-content iframe,
+.submission-card-video-content video {
   left: 0;
   top: 0;
   height: 100%;

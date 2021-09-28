@@ -48,7 +48,20 @@ const SubmissionCardTwitterMediaContent = (props: { submission: Submission }) =>
   );
 };
 
+const SubmissionCardRedditVideoMediaContent = (props: { submission: Submission }) => {
+  const media = props.submission.media?.reddit_video;
+  return (
+    <div className={styles['submission-card-video-content']}>
+      <video controls src={media?.fallback_url} />
+    </div>
+  );
+}
+
 const SubmissionCardMediaContent = (props: { submission: Submission }) => {
+  const isRedditVideo = !!props.submission.media?.reddit_video;
+  if (isRedditVideo) {
+    return <SubmissionCardRedditVideoMediaContent submission={props.submission} />;
+  }
   const mediaType = props.submission.media?.type;
   switch (mediaType) {
     case 'youtube.com':
@@ -65,6 +78,7 @@ const SubmissionCardGalleryContent = (_props: { submission: Submission }) => {
 };
 
 export const SubmissionCardContent = (props: { submission: Submission }) => {
+  console.log(props.submission);
   const hasMedia = !!props.submission.media;
   const hasGallery = !!(props.submission as any).media_metadata;
   const hasPreviews = props.submission.preview?.images?.length > 0;
