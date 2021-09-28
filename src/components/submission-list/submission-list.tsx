@@ -5,7 +5,7 @@ import AlertTitle from '@mui/material/AlertTitle';
 import { Listing, Submission } from 'snoowrap';
 import SubmissionCard from 'components/submission-card';
 import SubmissionCardSkeleton from 'components/submission-card-skeleton';
-import { ApiContext } from 'api';
+import ApiContext from 'components/api-context';
 
 const Loading = () => (
   <>
@@ -22,7 +22,7 @@ const Failed = () => (
   </Alert>
 );
 
-const Finished = (props: { submissions: Listing<Submission> }) => (
+const Success = (props: { submissions: Listing<Submission> }) => (
   <>
     {props.submissions.map((submission) => (
       <SubmissionCard key={submission.id} submission={submission} />
@@ -30,32 +30,35 @@ const Finished = (props: { submissions: Listing<Submission> }) => (
   </>
 );
 
+enum State {
+  Loading,
+  Success,
+  Failed,
+}
+
 export const SubmissionList = () => {
   const [submissions, setSubmissions] = useState<Listing<Submission>>([] as unknown as Listing<Submission>);
-  const [isLoading, setLoading] = useState<boolean>(true);
-  const [isFinished, setFinished] = useState<boolean>(false);
-  const [isFailed, setError] = useState<boolean>(false);
+  const [state, setState] = useState<State>(State.Loading);
   const apiContext = useContext(ApiContext);
 
   useEffect(() => {
+    setState(State.Loading);
     apiContext?.api
       .getHot()
       .then((submissions) => {
         setSubmissions(submissions);
-        setLoading(false);
-        setFinished(true);
+        setState(State.Success);
       })
       .catch(() => {
-        setLoading(false);
-        setError(true);
+        setState(State.Failed);
       });
   }, [apiContext]);
 
   return (
     <Stack spacing={3} sx={{ marginY: '20px' }} direction="column" justifyContent="flex-start" alignItems="center">
-      {isLoading ? <Loading /> : null}
-      {isFailed ? <Failed /> : null}
-      {isFinished ? <Finished submissions={submissions} /> : null}
+      {state === State.Loading ? <Loading /> : null}
+      {state === State.Failed ? <Failed /> : null}
+      {state === State.Success ? <Success submissions={submissions} /> : null}
     </Stack>
   );
 };

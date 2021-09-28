@@ -1,4 +1,3 @@
-import { createContext, Dispatch } from 'react';
 import Snoowrap, { Listing, Submission } from 'snoowrap';
 
 export type ApiOptions = { userAgent: string; clientId: string; clientSecret: string; refreshToken: string };
@@ -48,15 +47,3 @@ export const storeApiOptionsInStorage = (options: ApiOptions): void => {
   window.localStorage.setItem('clientSecret', options.clientSecret);
   window.localStorage.setItem('refreshToken', options.refreshToken);
 };
-
-export const apiReducer = (api: Api, options: ApiOptions): Api => {
-  if (api.isNewOptions(options)) {
-    storeApiOptionsInStorage(options);
-    return createApi(options);
-  }
-  return api;
-};
-
-export const getApiDefaultValue = () => createApi(getApiOptionsFromStorage());
-
-export const ApiContext = createContext<undefined | { api: Api; setApiOptions: Dispatch<ApiOptions> }>(undefined);
