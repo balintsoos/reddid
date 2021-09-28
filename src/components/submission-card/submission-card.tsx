@@ -1,29 +1,23 @@
 import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import SubmissionCardContent from 'components/submission-card-content';
 import { Submission } from 'snoowrap';
 
+const SubmissionCardSubheader = (props: { submission: Submission }) => {
+  const subreddit = props.submission.subreddit_name_prefixed;
+  return <>{`${subreddit} - ${props.submission.ups} ups ${props.submission.downs} downs`}</>;
+};
+
 export const SubmissionCard = (props: { submission: Submission }) => {
-  const { submission } = props;
-  const hasImages = submission.preview?.images?.length > 0;
-  const firstImage = submission.preview?.images[0];
   return (
     <Card sx={{ width: { xs: '100%', md: '800px' } }}>
       <CardActionArea>
         <CardHeader
-          title={submission.title}
-          subheader={`${submission.subreddit_name_prefixed} - ${submission.ups} ups ${submission.downs} downs`}
+          title={props.submission.title}
+          subheader={<SubmissionCardSubheader submission={props.submission} />}
         />
-        {hasImages ? (
-          <CardMedia component="img" image={firstImage.source.url} />
-        ) : (
-          <CardContent>
-            <Typography>{submission.selftext}</Typography>
-          </CardContent>
-        )}
+        <SubmissionCardContent submission={props.submission} />
       </CardActionArea>
     </Card>
   );
